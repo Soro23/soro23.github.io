@@ -25,6 +25,8 @@ import {
   DiMsqlServer,
   DiUbuntu,
   DiMagento,
+  DiDrupal,
+  DiMarkdown,
 } from 'react-icons/di';
 
 import {
@@ -182,6 +184,12 @@ const StoryOverview: React.FC<Props> = () => {
       color: '#c69',
       section: 'markup-language'
     },
+    {
+      name: 'XML',
+      icon: DiCode,
+      color: '#264de4',
+      section: 'markup-language'
+    },
     // Source Control
     {
       name: 'GitHub',
@@ -306,7 +314,7 @@ const StoryOverview: React.FC<Props> = () => {
       name: 'Magento 2',
       icon: DiMagento,
       size: 18,
-      color: '#21759b',
+      color: '#f2641c',
       section: 'ecommerce'
     },
     {
@@ -319,6 +327,13 @@ const StoryOverview: React.FC<Props> = () => {
     {
       name: 'WooCommerce',
       icon: DiWordpress,
+      size: 18,
+      color: '#7c51ad',
+      section: 'ecommerce'
+    },
+    {
+      name: 'Drupal',
+      icon: DiDrupal,
       size: 18,
       color: '#21759b',
       section: 'ecommerce'

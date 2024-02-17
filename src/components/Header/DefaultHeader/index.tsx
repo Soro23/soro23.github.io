@@ -7,10 +7,10 @@ import {
 import { GoRepo } from "react-icons/go";
 
 import TabMenu         from '../../TabMenu';
-import Footer          from '../../Footer';
 import PinnedProjects  from '../../Content/PinnedProjects';
 import ProfileOverview from '../../Content/ProfileOverview';
 import StoryOverview from '../../Content/StoryOverview';
+import Soon from '../../Soon';
 
 interface Props {}
 
@@ -25,7 +25,7 @@ const Header: React.FC<Props> = () => {
         <React.Fragment>
           <ProfileOverview />
           {/* <PinnedProjects /> */}
-           <Footer />
+           {/* <Footer /> */}
         </React.Fragment>
       )
     },
@@ -36,7 +36,7 @@ const Header: React.FC<Props> = () => {
       count:   20,
       content: (
         <React.Fragment>
-          {/* <StoryOverview /> */}
+          <StoryOverview />
         </React.Fragment>
       ),
     },
@@ -47,7 +47,7 @@ const Header: React.FC<Props> = () => {
       count:   20,
       content: (
         <React.Fragment>
-          {/* <PinnedProjects /> */}
+          <Soon />
         </React.Fragment>
       ),
     },
@@ -56,7 +56,11 @@ const Header: React.FC<Props> = () => {
       link:    '/',
       label:   'Insight',
       count:   25,
-      content: '4',
+      content: (
+        <React.Fragment>
+          <Soon />
+        </React.Fragment>
+      ),
     },
   ];
 
