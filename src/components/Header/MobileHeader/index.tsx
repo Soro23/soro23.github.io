@@ -13,7 +13,6 @@ const MobileHeader: React.FC<Props> = () => {
 
   return (
     <header className="mobileHeader w-full order-2 flex items-center justify-between p-[15px] md:px-[30px] mb-5 dark:bg-stickyBorder dark:border-0 border-b dark:border-b-borderColorLight bg-[rgba(0,0,0,0.009)] border-b-[rgba(0,0,0,0.02)]">
-
       <div className="flex flex-1 items-center justify-start">
         {/* <GoThreeBars size={24} fill={iconColor} /> */}
         <span className="font-sans font-medium dark:text-textColorDark">
