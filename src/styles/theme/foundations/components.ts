@@ -1,12 +1,18 @@
 import { StyleFunctionProps } from "@chakra-ui/react";
-import { mode } from '@chakra-ui/theme-tools'
 
 export default {
   Button: {
+    baseStyle: {
+    },
+    defaultProps: {
+      bg: '#0f0fd3',
+      
+    },
+  },
+  Link: {
     baseStyle: (props: StyleFunctionProps) => ({
-      dialog: {
-        bg: mode('white', 'red')(props),
-      },
+      fontWeight: 'normal',
+      color: props.colorMode === 'dark' ? 'dark.highlight-text' : 'light.highlight-text',
     }),
   },
 };

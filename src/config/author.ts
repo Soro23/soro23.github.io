@@ -8,7 +8,7 @@ interface AuthorType {
   country:     string;
   city:        string;
   description: string;
-  countryCode: keyof typeof Flags;
+  countryCode: string;
 }
 
 const Author: AuthorType = {
