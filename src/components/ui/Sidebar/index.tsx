@@ -34,9 +34,9 @@ export function Sidebar() {
         px={["2", "4"]}
         minW="300"
         maxW="300"
-        position={"sticky"}
+        position={"fixed"}
         left={"0"}
-        top={"0"}
+        top={20}
         zIndex={999}
     >
         <Avatar
