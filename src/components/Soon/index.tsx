@@ -1,24 +1,20 @@
+import { Box, Text } from '@chakra-ui/react';
 import React from 'react';
-import Link from 'next/link';
-import AuthorConfig from '../../config/author';
 import { AiFillHeart } from "react-icons/ai";
 
-interface Props { }
 
-const Soon: React.FC<Props> = props => {
-
+export function Soon() {
   return (
-    <React.Fragment>
-      <div className="profile-overview w-full flex items-center justify-start my-7 mx-auto">
-       <div className="w-full flex items-center font-sans dark:text-headerTextColor text-sm justify-center mt-[100px]">
-          <span className="mx-[5px]">
-            <AiFillHeart fill="#cd3c1a" size={18} />
-          </span>
-          Comming Soon
-        </div>
-      </div>
-    </React.Fragment>
+    <Box
+      display={'flex'}
+      alignItems={'center'} 
+      justifyContent={'center'}
+      gap={2}
+      p={10}>
+      <AiFillHeart fill="#cd3c1a" size={18} />
+      <Text>
+        Comming Soon
+      </Text>
+    </Box>
   );
 };
-
-export default Soon;
