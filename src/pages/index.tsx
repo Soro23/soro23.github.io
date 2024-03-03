@@ -1,7 +1,8 @@
 import type { NextPage } from 'next'
 import { Box, Tab, TabIndicator, TabList, TabPanel, TabPanels, Tabs, useColorMode, useColorModeValue } from '@chakra-ui/react'
 import {Soon} from '@/components/Soon';
-import {ProfileOverview} from '@/components/ProfileOverview';
+import {ProfileOverview} from '@/components/Content/ProfileOverview';
+import StoryOverview from '@/components/Content/StoryOverview';
 
 const Home: NextPage = () => {
 
@@ -21,10 +22,10 @@ const Home: NextPage = () => {
         />
         <TabPanels>
           <TabPanel>
-            <ProfileOverview></ProfileOverview>
+            <ProfileOverview />
           </TabPanel>
           <TabPanel>
-            <p>Story!</p>
+            <StoryOverview />
           </TabPanel>
           <TabPanel>
             <Soon/>
