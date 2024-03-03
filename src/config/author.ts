@@ -26,13 +26,10 @@ interface Technologies {
 
 interface StoryType {
   icon?: IconType;
-  tags?: React.ReactNode[];
-  label: React.ReactNode;
+  tags?: string[];
+  label: string;
   badge?: string;
-  toggle?: boolean;
-  shrink?: (shrink: boolean) => void;
-  className?: string;
-  description?: React.ReactNode;
+  description?: string;
   functions?: string[];
 }
 
@@ -398,7 +395,7 @@ const Author: AuthorType = {
       icon: FaGraduationCap,
       description: 'August 09 - June 12 ',
     },
-  ];
+  ],
 };
 
 export default Author;

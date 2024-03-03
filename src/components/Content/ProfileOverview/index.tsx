@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
-import Highlight from '@/components/Highlight';
 import Author from '@/config/author';
-import { Box, HStack, Heading, Icon, IconButton, Tab, TabIndicator, TabList, TabPanel, TabPanels, Tabs, Text, VStack } from '@chakra-ui/react';
+import { Box, HStack, Heading, Icon, Tab, TabList, TabPanel, TabPanels, Tabs, Text } from '@chakra-ui/react';
 import colors, { ColorType } from '@/config/colors';
-import { Ri24HoursFill, RiSearch2Fill } from 'react-icons/ri';
 import { GiStack } from 'react-icons/gi';
 import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io';
 
@@ -16,10 +14,10 @@ interface TechnologiesBySection {
 export function ProfileOverview() {
   const [isShrink, setIsShrink] = useState(false);
   const toggleIsShrink = () => {
-    setIsShrink(!isShrink); // Cambiar el estado de true a false o de false a true
+    setIsShrink(!isShrink);
   };
 
-  
+
   const technologiesBySection: TechnologiesBySection = Author.technologies.reduce((acc: TechnologiesBySection, tech) => {
     if (!acc[tech.section]) {
       acc[tech.section] = [];
@@ -36,18 +34,18 @@ export function ProfileOverview() {
   return (
     <Box border={'1px solid'} borderColor='gray.700' borderRadius={'10'} p={4}>
       <HStack justifyContent={'space-between'}>
-        <Heading as={'h4'} fontSize={'large'} color={'dark.highlight-text'} display={'flex'} gap={2}><GiStack/>Technologies</Heading>
+        <Heading as={'h4'} fontSize={'large'} color={'dark.highlight-text'} display={'flex'} gap={2}><GiStack />Technologies</Heading>
         {!isShrink ? (
           <IoIosArrowUp onClick={toggleIsShrink} cursor={'pointer'} />
-          ) : (
+        ) : (
           <IoIosArrowDown onClick={toggleIsShrink} cursor={'pointer'} />
         )}
       </HStack>
       {!isShrink ? (
         Object.keys(technologiesBySection).map((section, index) => (
-          <Tabs position="relative" variant="unstyled">
+          <Tabs key={index} position="relative" variant="unstyled">
             <TabList border={'0px solid'} borderBottom={'1px'} borderColor='gray.900' >
-              <Tab key={index} border={'1px solid'} borderBottom={'0px'} py={1} borderColor='gray.800' borderTopRightRadius={'10'} borderTopLeftRadius={'10'} fontSize={'small'} fontWeight={'500'}>{section}</Tab>
+              <Tab  border={'1px solid'} borderBottom={'0px'} py={1} borderColor='gray.800' borderTopRightRadius={'10'} borderTopLeftRadius={'10'} fontSize={'small'} fontWeight={'500'}>{section}</Tab>
             </TabList>
             <TabPanels>
               <TabPanel>
@@ -80,8 +78,6 @@ export function ProfileOverview() {
         </Box>
 
       )}
-
-
     </Box>
   );
 };
