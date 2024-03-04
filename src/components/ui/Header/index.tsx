@@ -30,7 +30,7 @@ export function Header() {
                 {colorMode === 'dark' ? <FiSun size={24} fill="#fff" /> : <FiMoon size={24} />}
             </Box>
             <Flex align="center" ml="auto" pr="4">
-                <Divider orientation='vertical' my="8" mx="4" />
+                <Divider orientation='vertical' my="8" />
             </Flex>
         </Flex>
     );
