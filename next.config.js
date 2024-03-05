@@ -3,7 +3,8 @@
  */
 const nextConfig = {
     output: 'export',
-
+    reactStrictMode: true,
+    assetPrefix: 'https://soro23.github.io/'
     // Optional: Change links `/me` -> `/me/` and emit `/me.html` -> `/me/index.html`
     // trailingSlash: true,
 
