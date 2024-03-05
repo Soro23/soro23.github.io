@@ -3,6 +3,7 @@ import { Box, Tab, TabIndicator, TabList, TabPanel, TabPanels, Tabs, useColorMod
 import { Soon } from '@/components/Soon';
 import { ProfileOverview } from '@/components/Content/ProfileOverview';
 import { StoryOverview } from '@/components/Content/StoryOverview';
+import { SecondBrain } from '@/components/Content/SecondBrain';
 
 const Home: NextPage = () => {
 
@@ -14,6 +15,7 @@ const Home: NextPage = () => {
           <Tab>Story</Tab>
           <Tab>Code Gist</Tab>
           <Tab>Insight</Tab>
+          <Tab>Second Brain</Tab>
         </TabList>
         <TabIndicator
           height="2px"
@@ -32,6 +34,9 @@ const Home: NextPage = () => {
           </TabPanel>
           <TabPanel>
             <Soon />
+          </TabPanel>
+          <TabPanel>
+            <SecondBrain />
           </TabPanel>
         </TabPanels>
       </Tabs>
