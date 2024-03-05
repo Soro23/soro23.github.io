@@ -1,12 +1,12 @@
 import { StyleFunctionProps } from "@chakra-ui/react";
 
-export default {
+const components = {
   Button: {
     baseStyle: {
     },
     defaultProps: {
       bg: '#0f0fd3',
-      
+
     },
   },
   Link: {
@@ -17,3 +17,4 @@ export default {
   },
 };
 
+export default components;

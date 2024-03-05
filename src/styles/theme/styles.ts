@@ -1,7 +1,7 @@
 import { StyleFunctionProps } from "@chakra-ui/react";
 import { mode } from '@chakra-ui/theme-tools'
 
-export default {
+const styles = {
   global: (props: StyleFunctionProps) => ({
     body: {
       color: mode('light.text', 'dark.text')(props),
@@ -9,6 +9,7 @@ export default {
     },
   }),
 };
+export default styles;
 // success:               '#288528',
 // tabIcon:               '#484f58',
 // darkColor:             '#0d1117',

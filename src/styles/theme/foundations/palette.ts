@@ -1,4 +1,4 @@
-export default {
+const palette = {
   light: {
     'text2': '#24292e',
     'text': '#6a737d',
@@ -69,3 +69,5 @@ export default {
   tailwindcss: '#38bdf8',
   java: '#4e7fa0',
 };
+
+export default palette;

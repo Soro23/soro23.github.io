@@ -1,4 +1,4 @@
-export default {
+const sizes = {
   sizes: {
     max: 'max-content',
     min: 'min-content',
@@ -25,3 +25,4 @@ export default {
     },
   },
 };
+export default sizes;
