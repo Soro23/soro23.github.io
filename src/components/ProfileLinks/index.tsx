@@ -1,4 +1,4 @@
-import { Box, Link } from '@chakra-ui/react';
+import { Box, Link, useColorModeValue } from '@chakra-ui/react';
 import React from 'react';
 import {
   FaGithub,
@@ -8,6 +8,7 @@ import {
 } from 'react-icons/fa';
 
 export function ProfileLinks() {
+  const text = useColorModeValue('light.text2', 'dark.text2')
 
   const links = [
     {
@@ -47,6 +48,8 @@ export function ProfileLinks() {
         display={'flex'}
         alignItems={'center'}
         gap={2}
+        color={text}
+        py={1}
         {...rel}
       >
         <link.icon size={14} />{link?.useTitle || link.link}
