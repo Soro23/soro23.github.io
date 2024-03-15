@@ -1,6 +1,8 @@
 import { Flex, useBreakpointValue, IconButton, Icon, Divider, useColorModeValue, useColorMode, Button, Box, Link } from '@chakra-ui/react'
 import { FiMoon, FiSun } from 'react-icons/fi';
 import Author from '../../../config/author'
+import { useRouter } from 'next/router';
+
 export function Header() {
     //   const { onOpen } = useSidebarDrawer();
     const { colorMode, toggleColorMode } = useColorMode()
@@ -10,7 +12,10 @@ export function Header() {
         base: false,
         lg: true,
     })
-
+    const router = useRouter();
+    const handleHome = () => {
+        router.push('/');
+    };
     return (
         <Flex
             as="header"
@@ -23,8 +28,10 @@ export function Header() {
             flexDir={'row'}
             px={4}
         >
-            <Box flex={1}>
-                {Author.site}
+            <Box flex={1} >
+                <Box onClick={() => handleHome()} as='button'>
+                    {Author.site}
+                </Box>
             </Box>
             <Box as='button' onClick={toggleColorMode} flex={1} display={'flex'} flexDir={'row-reverse'}>
                 {colorMode === 'dark' ? <FiSun size={24} fill="#fff" /> : <FiMoon size={24} />}

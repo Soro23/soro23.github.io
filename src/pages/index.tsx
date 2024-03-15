@@ -3,7 +3,7 @@ import { Box, Tab, TabIndicator, TabList, TabPanel, TabPanels, Tabs, useColorMod
 import { Soon } from '@/components/Soon';
 import { ProfileOverview } from '@/components/Content/ProfileOverview';
 import { StoryOverview } from '@/components/Content/StoryOverview';
-import { SecondBrain } from '@/components/Content/SecondBrain';
+import { SecondBrainLogin } from '@/components/Content/SecondBrainLogin';
 
 const Home: NextPage = () => {
 
@@ -13,8 +13,8 @@ const Home: NextPage = () => {
         <TabList gap={4}>
           <Tab>Profile</Tab>
           <Tab>Story</Tab>
-          <Tab>Code Gist</Tab>
-          <Tab>Insight</Tab>
+          {/* <Tab>Code Gist</Tab> */}
+          {/* <Tab>Insight</Tab> */}
           <Tab>Second Brain</Tab>
         </TabList>
         <TabIndicator
@@ -29,14 +29,14 @@ const Home: NextPage = () => {
           <TabPanel>
             <StoryOverview />
           </TabPanel>
-          <TabPanel>
+          {/* <TabPanel>
             <Soon />
           </TabPanel>
           <TabPanel>
             <Soon />
-          </TabPanel>
+          </TabPanel> */}
           <TabPanel>
-            <SecondBrain />
+            <SecondBrainLogin />
           </TabPanel>
         </TabPanels>
       </Tabs>

@@ -1,21 +1,32 @@
 import { Box, HStack, Heading, Text } from '@chakra-ui/react';
 import React from 'react';
+import type { NextPage } from 'next'
 
-export function SecondBrain() {
+const SecondBrain:NextPage = () => {
   const projects = [
     {
-      title: 'CV',
-      tecnologies: ['ReactJS', 'NextJS', 'Typescript', 'ChakraUI'],
+      title: 'Pathpocket',
+      description: 'Pathfinder charactersheet online',
+      tecnologies: ['ReactJS', 'NextJS', 'Typescript', 'ChakraUI', 'Firebase'],
     },
     {
+      title: 'Caminando por Japón',
+      description: 'Blog with latest news from japan',
+      tecnologies: ['Wordpress'],
+    }, {
+      title: 'CV',
+      description: '',
+      tecnologies: ['ReactJS', 'NextJS', 'Typescript', 'ChakraUI'],
+    }, {
       title: 'Own Calendar',
+      description: '',
       tecnologies: ['Microservices', '...'],
-    },
+    }
   ];
 
 
   return (
-    <Box>
+    <Box w={'100vw'} p={4}>
       <Heading as={'h2'} fontSize={'large'} display={'flex'} p={2} m={2}>Projects</Heading>
 
       {projects.map((project, index: number) => (
@@ -23,6 +34,7 @@ export function SecondBrain() {
           <HStack flexFlow={'wrap'}>
             <Heading as={'h4'} fontSize={'medium'} color={'dark.highlight-text'} display={'flex'} gap={2}>{project.title}</Heading>
           </HStack>
+          <Text fontSize={14} py={1} >{project.description}</Text>
           <HStack py={4} flexFlow={'wrap'}>
             {project.tecnologies?.map((tech, techIndex) => (
               <HStack key={techIndex} >
@@ -36,3 +48,5 @@ export function SecondBrain() {
     </Box>
   );
 };
+
+export default SecondBrain;
