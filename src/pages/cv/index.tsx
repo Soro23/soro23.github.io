@@ -1,6 +1,6 @@
 import Author from '@/config/author';
 import colors, { ColorType } from '@/config/colors';
-import { Box, Heading, Text, Flex, Image, List, ListIcon, ListItem, Avatar, HStack, UnorderedList, Button } from '@chakra-ui/react';
+import { Box, Heading, Text, Flex, Image, List, ListIcon, ListItem, Avatar, HStack, UnorderedList, useMediaQuery  } from '@chakra-ui/react';
 import { ReactElement, JSXElementConstructor, ReactNode, PromiseLikeOfReactNode, Key, useEffect } from 'react';
 import { css } from '@emotion/react';
 
@@ -64,10 +64,10 @@ const CVPage = () => {
             newStyle.parentNode.removeChild(newStyle);
         }
     };
-
+    const [isSmallScreen] = useMediaQuery("(max-width: 768px)");
 
     return (
-        <Box zIndex={1} position={'relative'} color={'gray.800'}>
+        <Box zIndex={1} position={'relative'} color={'gray.800'} display={isSmallScreen ? 'none' : 'block'}>
             <Flex mb={4}>
                 {/* Primera fila */}
                 <Box mb={4} className='section' flex="1" pr={8}>

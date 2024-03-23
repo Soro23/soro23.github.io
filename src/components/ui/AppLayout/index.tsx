@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { Box, Flex, Text } from "@chakra-ui/react";
+import { Box, Flex, Link, Text } from "@chakra-ui/react";
 import { Header } from "../Header";
 import { Sidebar } from "../Sidebar";
 import { useMediaQuery } from "@chakra-ui/react"
@@ -16,6 +16,7 @@ export default function AppLayout({ children }: Props) {
 
   // Excluir la página NoLayoutPage del diseño
   const excludeFromLayout = router.pathname === '/cv';
+  const [isSmallScreen] = useMediaQuery("(max-width: 768px)");
 
   return (
     !excludeFromLayout ?
@@ -69,10 +70,13 @@ export default function AppLayout({ children }: Props) {
             bgRepeat: 'no-repeat',
             bgSize: 'cover',
             bgBlendMode: 'luminosity',
-          }}>
-
+          }} display={isSmallScreen ? 'none' : 'block'}>
           {children}
         </Box>
+        {isSmallScreen &&
+          <Box p={16} w={'100vw'} h={'100vh'} mx="auto" alignItems={'center'} display={'flex'} justifyContent={'center'}>
+            <Link fontSize={50}  href='https://soro23.github.io' >GO HOME</Link>
+          </Box>}
       </Flex>
 
   );

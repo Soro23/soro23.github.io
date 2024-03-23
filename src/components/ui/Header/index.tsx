@@ -13,8 +13,8 @@ export function Header() {
         lg: true,
     })
     const router = useRouter();
-    const handleHome = () => {
-        router.push('/');
+    const handleCV = () => {
+        router.push('/cv');
     };
     return (
         <Flex
@@ -29,7 +29,7 @@ export function Header() {
             px={4}
         >
             <Box flex={1} >
-                <Box onClick={() => handleHome()} as='button'>
+                <Box onClick={() => handleCV()} as='button'>
                     {Author.site}
                 </Box>
             </Box>
