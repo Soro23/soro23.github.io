@@ -8,11 +8,11 @@ export function SecondBrainLogin() {
   const router = useRouter();
 
   const handleSubmit = () => {
-    const sbUsername = process.env.SBUSERNAME
-    const sbPassword = process.env.SBPASSWORD
-    if (username === sbUsername && password === sbPassword) {
+    // const sbUsername = process.env.SBUSERNAME
+    // const sbPassword = process.env.SBPASSWORD
+    // if (username === sbUsername && password === sbPassword) {
       router.push('/SecondBrain');
-    }
+    // }
   };
 
 

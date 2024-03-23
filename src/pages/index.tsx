@@ -36,7 +36,7 @@ const Home: NextPage = () => {
             <Soon />
           </TabPanel> */}
           <TabPanel>
-            <SecondBrainLogin />
+            {/* <SecondBrainLogin /> */}
           </TabPanel>
         </TabPanels>
       </Tabs>

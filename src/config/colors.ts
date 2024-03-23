@@ -29,6 +29,10 @@ const colors = {
   reactnative: '#00d8ff',
   tailwindcss: '#38bdf8',
   java: '#4e7fa0',
+  npm: '#cb3837',
+  bootstrap: '#563d7c',
+  html5: '#e34c26',
+  css3: '#264de4',
 };
 
 export type ColorType = keyof typeof colors;

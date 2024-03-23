@@ -30,7 +30,7 @@ export function Header() {
         >
             <Box flex={1} >
                 <Box onClick={() => handleHome()} as='button'>
-                    {Author.site}{process.env.SBUSERNAME}
+                    {Author.site}
                 </Box>
             </Box>
             <Box as='button' onClick={toggleColorMode} flex={1} display={'flex'} flexDir={'row-reverse'}>

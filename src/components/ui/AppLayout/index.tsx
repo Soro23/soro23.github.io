@@ -1,52 +1,79 @@
 import { ReactNode } from "react";
-import { Flex, Text } from "@chakra-ui/react";
+import { Box, Flex, Text } from "@chakra-ui/react";
 import { Header } from "../Header";
 import { Sidebar } from "../Sidebar";
 import { useMediaQuery } from "@chakra-ui/react"
+import { useRouter } from "next/router";
 
 interface Props {
   children: ReactNode;
 }
 
 export default function AppLayout({ children }: Props) {
-
-
   const [isMobile] = useMediaQuery("(max-width: 768px)")
 
+  const router = useRouter();
+
+  // Excluir la página NoLayoutPage del diseño
+  const excludeFromLayout = router.pathname === '/cv';
+
   return (
-    isMobile ?
-      <Flex direction="row">
-        <Flex direction="column" w="full">
-          <Header />
-          <Sidebar />
-          <Flex id="main-content"
-            minH={"100vh"}
-            direction={'row'}
-            justify={'center'}
-            w={'100vw'}
-            px={6}
+    !excludeFromLayout ?
+      (isMobile ?
+        <Flex direction="row">
+          <Flex direction="column" w="full">
+            <Header />
+            <Sidebar />
+            <Flex id="main-content"
+              minH={"100vh"}
+              direction={'row'}
+              justify={'center'}
+              w={'100vw'}
+              px={6}
             >
-            {children}
+              {children}
 
+            </Flex>
           </Flex>
         </Flex>
-      </Flex>
-      :
-      <Flex direction="row">
-        <Flex direction="column" w="full">
-          <Header />
-          <Sidebar />
-          <Flex id="main-content"
-            minH={"100vh"}
-            direction={'row'}
-            justify={'center'}
-            w={'calc(100% - 300px)'}
-            ml={'300px'}
-          >
-            {children}
+        :
+        <Flex direction="row">
+          <Flex direction="column" w="full">
+            <Header />
+            <Sidebar />
+            <Flex id="main-content"
+              minH={"100vh"}
+              direction={'row'}
+              justify={'center'}
+              w={'calc(100% - 300px)'}
+              ml={'300px'}
+            >
+              {children}
 
+            </Flex>
           </Flex>
         </Flex>
+      ) :
+      <Flex direction="row" bg={'gray.800'}>
+        <Box p={16} maxW="21cm" mx="auto" position={'relative'} bg={'white'} id="cv-to-print"
+          _before={{
+            content: `""`,
+            position: "absolute",
+            width: "100%",
+            height: "100%",
+            top: 0,
+            left: 0,
+            // bg: "gray.900",
+            opacity: "0.2",
+            bgImage: './cv_bg.png',
+            bgRepeat: 'no-repeat',
+            bgSize: 'cover',
+            bgBlendMode: 'luminosity',
+          }}>
+
+          {children}
+        </Box>
       </Flex>
+
   );
 }

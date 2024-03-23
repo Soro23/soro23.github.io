@@ -1,27 +1,37 @@
 import { IconType } from 'react-icons';
 import { DiJavascript1, DiJqueryLogo, DiNpm, DiCode, DiBootstrap, DiHtml5, DiCss3Full, DiSass, DiGithubBadge, DiMysql, DiMsqlServer, DiPostgresql, DiMongodb, DiFirebase, DiRedis, DiAws, DiGoogleCloudPlatform, DiHeroku, DiDocker, DiUbuntu, DiMagento, DiWordpress, DiDrupal } from 'react-icons/di';
-import { FaNodeJs, FaReact, FaPhp, FaSymfony, FaLaravel, FaGitlab, FaNetworkWired, FaGraduationCap } from 'react-icons/fa';
+import { FaNodeJs, FaReact, FaPhp, FaSymfony, FaLaravel, FaGitlab, FaNetworkWired, FaGraduationCap, FaGithub, FaLinkedinIn, FaRegEnvelope, FaStackOverflow, FaPhone } from 'react-icons/fa';
 
 interface AuthorType {
   site: string;
   role: string;
+  cvrole: string;
+  cvdescription: string;
   name: string;
   avatar: string;
   country: string;
   city: string;
   description: string;
   countryCode: string;
+  links: Links[];
   technologies: Technologies[];
   workstories: StoryType[];
   educationstories: StoryType[];
 }
-
+interface Links {
+  link: string;
+  icon: IconType;
+  label: string;
+  useTitle?: string;
+  hidden?: boolean
+}
 interface Technologies {
   name: string;
   size?: number;
   icon: IconType;
   color?: string;
   section: string;
+  isStarred?: boolean;
 }
 
 interface StoryType {
@@ -37,11 +47,47 @@ const Author: AuthorType = {
   site: '<aitorsolana.dev />',
   name: 'Aitor Solana',
   role: 'Backend Developer',
+  cvrole: 'Jr. Full-Stack Developer',
   avatar: 'https://avatars.githubusercontent.com/u/57442992',
   city: 'Barcelona',
   country: 'Spain',
   countryCode: 'ES',
   description: 'Software Engineer, Backend Developer, PHP Expert, Magento 2 Enthusiast',
+  cvdescription: 'Hola, soy Aitor, desarrollador con más de 4 años de experiencia en la creación de sitios web tanto en el front como en el back. Soy apasionadoo en lo que hago y estaría feliz de tener la oportunidad de colaborar contigo.',
+  links: [
+    {
+      link: 'tel:+34697222324',
+      icon: FaPhone,
+      label: '+34697222324',
+      useTitle: 'Teléfono',
+    },
+    {
+      link: 'mailto:aitor23.soro@gmail.com',
+      icon: FaRegEnvelope,
+      label: 'aitor23.soro@gmail.com',
+      useTitle: 'Correo Electrónico',
+    },
+    {
+      link: 'https://github.com/soro23',
+      icon: FaGithub,
+      label: 'GitHub',
+      hidden: true,
+    },
+    {
+      link: 'https://stackoverflow.com/users/21296801/aitor-sr/',
+      icon: FaStackOverflow,
+      label: 'Stack Overflow',
+      useTitle: 'StackOverflow/aitor-sr',
+      hidden: true,
+    },
+    {
+      link: 'https://www.linkedin.com/in/aitor-solana-roca/',
+      icon: FaLinkedinIn,
+      label: 'LinkedIn',
+      useTitle: 'LinkedIn/aitor-solana-roca',
+      hidden: true,
+    },
+  ],
   technologies: [
     // Javascript
     {
@@ -50,6 +96,7 @@ const Author: AuthorType = {
       icon: DiJavascript1,
       color: '#f7df1e',
       section: 'JavaScript',
+      isStarred: true,
     },
     {
       name: 'TypeScript',
@@ -62,6 +109,7 @@ const Author: AuthorType = {
       icon: DiJqueryLogo,
       color: '#0769ad',
       section: 'JavaScript',
+      isStarred: true,
     },
     // NodeJS
     {
@@ -69,6 +117,7 @@ const Author: AuthorType = {
       icon: FaNodeJs,
       color: '#44883e',
       section: 'NodeJS',
+      isStarred: true,
     },
     {
       name: 'Express.JS',
@@ -101,6 +150,7 @@ const Author: AuthorType = {
       icon: FaReact,
       color: '#00d8ff',
       section: 'ReactJS',
+      isStarred: true,
     },
     {
       name: 'NextAuth',
@@ -128,12 +178,14 @@ const Author: AuthorType = {
       icon: DiCode,
       size: 18,
       section: 'Design Framework',
+      isStarred: true,
     },
     {
       name: 'Bootstrap',
       icon: DiBootstrap,
       color: '#563d7c',
       section: 'Design Framework',
+      isStarred: true,
     },
     // PHP
     {
@@ -142,12 +194,14 @@ const Author: AuthorType = {
       size: 18,
       color: '#4f5b93',
       section: 'PHP',
+      isStarred: true,
     },
     {
       name: 'Composer',
       icon: DiCode,
       size: 18,
       section: 'PHP',
+      isStarred: true,
     },
     {
       name: 'Symfony',
@@ -168,13 +222,15 @@ const Author: AuthorType = {
       name: 'HTML5',
       icon: DiHtml5,
       color: '#e34c26',
-      section: 'Markup & Stylesheet'
+      section: 'Markup & Stylesheet',
+      isStarred: true,
     },
     {
       name: 'CSS3',
       icon: DiCss3Full,
       color: '#264de4',
-      section: 'Markup & Stylesheet'
+      section: 'Markup & Stylesheet',
+      isStarred: true,
     },
     {
       name: 'Sass',
@@ -195,6 +251,7 @@ const Author: AuthorType = {
       icon: DiGithubBadge,
       color: '#4078c0',
       section: 'Source Control',
+      isStarred: true,
     },
     {
       name: 'Gitlab',
@@ -210,6 +267,7 @@ const Author: AuthorType = {
       icon: DiMysql,
       color: '#00758f',
       section: 'Database',
+      isStarred: true,
     },
     {
       name: 'MSSQL',
@@ -231,6 +289,7 @@ const Author: AuthorType = {
       size: 18,
       color: '#4DB33D',
       section: 'Database',
+      isStarred: true,
     },
     {
       name: 'Firebase',
@@ -245,6 +304,7 @@ const Author: AuthorType = {
       icon: DiCode,
       size: 18,
       section: 'API',
+      isStarred: true,
     },
     // Catching
     {
@@ -280,6 +340,7 @@ const Author: AuthorType = {
       size: 18,
       color: '#FF9900',
       section: 'Deployment Service',
+      isStarred: true,
     },
     {
       name: 'Google Cloud Platform',
@@ -306,6 +367,7 @@ const Author: AuthorType = {
       icon: DiUbuntu,
       size: 18,
       section: 'Linux',
+      isStarred: true,
     },
     // Ecommerce Development
     {
@@ -313,14 +375,16 @@ const Author: AuthorType = {
       icon: DiMagento,
       size: 18,
       color: '#f2641c',
-      section: 'Ecommerce Module Development'
+      section: 'Ecommerce Module Development',
+      isStarred: true,
     },
     {
       name: 'WordPress',
       icon: DiWordpress,
       size: 18,
       color: '#21759b',
-      section: 'Ecommerce Module Development'
+      section: 'Ecommerce Module Development',
+      isStarred: true,
     },
     {
       name: 'WooCommerce',
