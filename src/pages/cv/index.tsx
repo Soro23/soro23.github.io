@@ -57,7 +57,9 @@ const CVPage = () => {
               `);
                 printWindow.document.close();
                 printWindow.print();
+                printWindow.close();
             }
+
             // @ts-ignore: Object is possibly 'null'.
             newStyle.parentNode.removeChild(newStyle);
         }
