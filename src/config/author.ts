@@ -403,11 +403,27 @@ const Author: AuthorType = {
   ],
   workstories: [
     {
+      tags: ['React Native', 'Firebase', 'MongoDB','Google Cloud Platform', 'Node.JS', 'Wordpress', 'PHP', 'jQuery', 'MySQL', 'Rest API', 'Ubuntu'],
+      badge: 'Work Expirience',
+      label: 'Preico Juridicos',
+      icon: FaNetworkWired,
+      description: 'March 24 - Actually',
+      functions: [
+        // 'Developed several Magento modules for data synchronization with ERPs such as Microsoft Dynamics 365, Sage, etc.',
+        // 'Developed several Magento modules to add and modify functionalities for both the frontend and the backend.',
+        // 'Analyzed and carried out solutions to optimize the performance of various ecommerce.',
+        // 'Optimized the database queries to enhance the website\'s performance.',
+        // 'Conducted a security audit on the website to identify potential vulnerabilities and implement prote\ctive measures.',
+        // 'Developed an API to facilitate data integration between the website and externa\l applications.',
+        // 'Enhanced the user experience on the website through improvements in navigation, layout, and\ accessibility.',
+      ],
+    },
+    {
       tags: ['Magento 2', 'Wordpress', 'PHP', 'jQuery', 'Composer', 'Synfony', 'MySQL', 'MSSQL', 'Rest API', 'Ubuntu'],
       badge: 'Work Expirience',
       label: 'Interdigital',
       icon: FaNetworkWired,
-      description: 'July 19 - Actually',
+      description: 'July 19 - March 24',
       functions: [
         'Developed several Magento modules for data synchronization with ERPs such as Microsoft Dynamics 365, Sage, etc.',
         'Developed several Magento modules to add and modify functionalities for both the frontend and the backend.',
