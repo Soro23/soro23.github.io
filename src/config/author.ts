@@ -409,13 +409,10 @@ const Author: AuthorType = {
       icon: FaNetworkWired,
       description: 'March 24 - Actually',
       functions: [
-        // 'Developed several Magento modules for data synchronization with ERPs such as Microsoft Dynamics 365, Sage, etc.',
-        // 'Developed several Magento modules to add and modify functionalities for both the frontend and the backend.',
-        // 'Analyzed and carried out solutions to optimize the performance of various ecommerce.',
-        // 'Optimized the database queries to enhance the website\'s performance.',
-        // 'Conducted a security audit on the website to identify potential vulnerabilities and implement prote\ctive measures.',
-        // 'Developed an API to facilitate data integration between the website and externa\l applications.',
-        // 'Enhanced the user experience on the website through improvements in navigation, layout, and\ accessibility.',
+        'Developed an internal CRM for managing clients and legal procedures in a law firm.',
+        'Created a secure API to allow external data extraction and remote creation of new clients.',
+        'Built a WebApp to visually manage sponsors of a Moto2 team, including sponsor placement on bike, helmet, suit, and truck.',
+        'Implemented automations in payment and invoicing software to streamline internal workflows.',
       ],
     },
     {
