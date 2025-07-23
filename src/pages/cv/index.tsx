@@ -124,13 +124,20 @@ const CVPage = () => {
                         right: 0,
                         bg: "gray.500",
                         opacity: "0.2",
-                    }}>Experiencia Laboral</Text>
+                    }}>Experiencia Laboral</Text>  
                 <Box mb={2}>
-                    <Text fontWeight="bold">CDO SupeinNihonto (Actualidad)</Text>
+                    <Text fontWeight="bold">Software Developer (marzo 2024 - Actualidad)</Text>
+                    <Text>Desarrollé un CRM interno para gestionar clientes y procedimientos legales en un despacho de abogados.</Text>
+                    <Text>Creé una API segura para permitir la extracción de datos desde fuera y la creación remota de nuevos clientes.</Text>
+                    <Text>Construí una WebApp para gestionar visualmente los patrocinadores de un equipo de Moto2, incluyendo su colocación en la moto, el casco, el mono y el camión.</Text>
+                    <Text>Implementé automatizaciones en el software de pagos y facturación para agilizar los flujos de trabajo internos.</Text>
+                </Box>
+                <Box mb={2}>
+                    <Text fontWeight="bold">CDO SupeinNihonto (enero 2021 - marzo 2025)</Text>
                     <Text>He gestionado la transición de la empresa desde depender de productos digitales de terceros hacia desarrollar internamente una plataforma propia de armas y armaduras japonesas. He guiado la estrategia digital desde la conceptualización hasta la implementación. Esta iniciativa ha consolidado nuestra posición como líderes en el mercado, generando un aumento significativo en la demanda y la fidelidad de los clientes.</Text>
                 </Box>
                 <Box mb={2}>
-                    <Text fontWeight="bold">Interdigital (julio 2019 - Actualidad)</Text>
+                    <Text fontWeight="bold">Interdigital (julio 2019 - febrero 2024)</Text>
                     <Text>He trabajado sobretodo con ecommerce en especifico para Magentos, para ellos he desarrollado varios módulos Magento para sincronizar datos con ERPs como Microsoft Dynamics 365, Sage, etc. También he añadido y modificado funcionalidades tanto en el frontend como en el backend. He realizado una auditoría de seguridad en el sitio web para identificar posibles vulnerabilidades y he implementado medidas de protección. Además, he creado una API para facilitar la integración de datos entre el sitio web y aplicaciones externas.</Text>
                 </Box>
                 <Box mb={2}>
