@@ -56,8 +56,11 @@ const CVPage = () => {
                 </html>
               `);
                 printWindow.document.close();
-                printWindow.print();
-                printWindow.close();
+              
+                printWindow.onload = () => {
+                  printWindow.print();
+                  printWindow.close();
+                };
             }
 
             // @ts-ignore: Object is possibly 'null'.
