@@ -203,8 +203,8 @@ const CVPage = () => {
                     <Text>Me ha proporcionado una formación integral en informática, abarcando temas como sistemas operativos, redes de computadoras, mantenimiento de equipos, seguridad informática y programación básica. He participado en proyectos prácticos, como la configuración de redes domésticas, la implementación de servidores web locales y el desarrollo de aplicaciones simples.</Text>
                 </Box>
             </Box>
-            <Text sx={{ pageBreakAfter: 'always' }}>&nbsp;</Text>
-            <Text sx={{ pageBreakBefore: 'always' }}>&nbsp;</Text>
+{/*             <Text sx={{ pageBreakAfter: 'always' }}>&nbsp;</Text>
+            <Text sx={{ pageBreakBefore: 'always' }}>&nbsp;</Text> */}
             {/* Sexta sección: Competencias */}
             <Box my={4} className='section'>
                 <Text mb={2} fontSize={24} color={'gray.500'} pos={'relative'}
