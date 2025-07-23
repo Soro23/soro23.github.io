@@ -126,7 +126,7 @@ const CVPage = () => {
                         opacity: "0.2",
                     }}>Experiencia Laboral</Text>  
                 <Box mb={2}>
-                    <Text fontWeight="bold">Software Developer (marzo 2024 - Actualidad)</Text>
+                    <Text fontWeight="bold">Preico Jurídicos (marzo 2024 - Actualidad)</Text>
                     <Text>Desarrollé un CRM interno para gestionar clientes y procedimientos legales en un despacho de abogados.</Text>
                     <Text>Creé una API segura para permitir la extracción de datos desde fuera y la creación remota de nuevos clientes.</Text>
                     <Text>Construí una WebApp para gestionar visualmente los patrocinadores de un equipo de Moto2, incluyendo su colocación en la moto, el casco, el mono y el camión.</Text>
@@ -134,7 +134,8 @@ const CVPage = () => {
                 </Box>
                 <Box mb={2}>
                     <Text fontWeight="bold">CDO SupeinNihonto (enero 2021 - marzo 2025)</Text>
-                    <Text>He gestionado la transición de la empresa desde depender de productos digitales de terceros hacia desarrollar internamente una plataforma propia de armas y armaduras japonesas. He guiado la estrategia digital desde la conceptualización hasta la implementación. Esta iniciativa ha consolidado nuestra posición como líderes en el mercado, generando un aumento significativo en la demanda y la fidelidad de los clientes.</Text>
+                    <Text>He gestionado la transición de la empresa desde depender de productos digitales de terceros hacia desarrollar internamente una plataforma propia de armas y armaduras japonesas.</Text>
+                    <Text>He guiado la estrategia digital desde la conceptualización hasta la implementación. Esta iniciativa ha consolidado nuestra posición como líderes en el mercado, generando un aumento significativo en la demanda y la fidelidad de los clientes.</Text>
                 </Box>
                 <Box mb={2}>
                     <Text fontWeight="bold">Interdigital (julio 2019 - febrero 2024)</Text>
@@ -146,8 +147,7 @@ const CVPage = () => {
                 </Box>
                 <Box>
                     <Text fontWeight="bold">INRETI (Octubre 11 - Septiembre 12)</Text>
-                    <Text>
-                        He colaborado con ingenieros de hardware para implementar un protocolo de comunicación en tiempo real entre la aplicación de spinning y el dispositivo conectado, permitiendo interacción fluida durante clases virtuales. También he desarrollado una función de mapeo de rutas virtuales dentro de la aplicación, que permite a los usuarios visualizar su progreso en rutas simuladas con cambios de elevación, ajustes de resistencia y variaciones de velocidad.</Text>
+                    <Text>He colaborado con ingenieros de hardware para implementar un protocolo de comunicación en tiempo real entre la aplicación de spinning y el dispositivo conectado, permitiendo interacción fluida durante clases virtuales. También he desarrollado una función de mapeo de rutas virtuales dentro de la aplicación, que permite a los usuarios visualizar su progreso en rutas simuladas con cambios de elevación, ajustes de resistencia y variaciones de velocidad.</Text>
                 </Box>
             </Box>
             {/* Cuarta sección: Stack */}
