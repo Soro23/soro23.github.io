@@ -16,7 +16,7 @@ export default function AppLayout({ children }: Props) {
 
   // Excluir la página NoLayoutPage del diseño
   const excludeFromLayout = router.pathname === '/cv';
-  const [isSmallScreen] = useMediaQuery("(max-width: 768px)");
+  const [isSmallScreen] = useMediaQuery("screen and (max-width: 768px)");
 
   return (
     !excludeFromLayout ?
