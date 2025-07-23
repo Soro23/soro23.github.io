@@ -73,10 +73,10 @@ export default function AppLayout({ children }: Props) {
           }} display={isSmallScreen ? 'none' : 'block'}>
           {children}
         </Box>
-        {isSmallScreen &&
+{/*         {isSmallScreen &&
           <Box p={16} w={'100vw'} h={'100vh'} mx="auto" alignItems={'center'} display={'flex'} justifyContent={'center'}>
             <Link fontSize={50}  href='https://soro23.github.io' >GO HOME</Link>
-          </Box>}
+          </Box>} */}
       </Flex>
 
   );
