@@ -47,13 +47,13 @@ const Author: AuthorType = {
   site: '<aitorsolana.dev />',
   name: 'Aitor Solana',
   role: 'Backend Developer',
-  cvrole: 'Jr. Full-Stack Developer',
+  cvrole: 'Senior Full-Stack Developer',
   avatar: 'https://avatars.githubusercontent.com/u/57442992',
   city: 'Barcelona',
   country: 'Spain',
   countryCode: 'ES',
-  description: 'Software Engineer, Backend Developer, PHP Expert, Magento 2 Enthusiast',
-  cvdescription: 'Hola, soy Aitor, desarrollador con más de 4 años de experiencia en la creación de sitios web tanto en el front como en el back. Soy apasionadoo en lo que hago y estaría feliz de tener la oportunidad de colaborar contigo.',
+  description: 'Software Engineer, Backend Developer, PHP Expert, APP Developer Enthusiast',
+  cvdescription: 'Hola, soy Aitor, desarrollador con más de 7 años de experiencia en desarrollo de software y creación de sitios web full-stack. Soy apasionadoo en lo que hago y estaría feliz de tener la oportunidad de colaborar contigo.',
   links: [
     {
       link: 'tel:+34697222324',
